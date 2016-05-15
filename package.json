@@ -1,0 +1,35 @@
+{
+  "name": "abematorn",
+  "version": "0.0.0",
+  "description": "abema.tv for Electron",
+  "main": "index.js",
+  "license": "MIT",
+  "repository": "akameco/abematorn",
+  "author": {
+    "name": "akameco",
+    "email": "akameco.t@gmail.com",
+    "url": "akameco.github.io"
+  },
+  "scripts": {
+    "start": "electron .",
+    "test": "xo"
+  },
+  "files": [
+    "index.js"
+  ],
+  "keywords": [
+    ""
+  ],
+  "dependencies": {},
+  "devDependencies": {
+    "electron-prebuilt": "^1.0.2",
+    "xo": "^0.15.1"
+  },
+  "xo": {
+    "esnext": true,
+    "envs": [
+      "node",
+      "browser"
+    ]
+  }
+}
