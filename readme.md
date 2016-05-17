@@ -4,7 +4,7 @@
 
 ## Download
 
-[Download](https://github.com/akameco/yamada/releases)
+[Download](https://github.com/akameco/abematron/releases)
 
 ## License
 
