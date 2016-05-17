@@ -2,7 +2,9 @@
 
 > abema.tv for desktop
 
-WIP
+## Download
+
+[Download](https://github.com/akameco/yamada/releases)
 
 ## License
 

@@ -1,10 +1,11 @@
 {
-  "name": "abematorn",
+  "name": "abematron",
   "version": "0.0.0",
+  "productName": "Abematron",
   "description": "abema.tv for Electron",
   "main": "index.js",
   "license": "MIT",
-  "repository": "akameco/abematorn",
+  "repository": "akameco/abematron",
   "author": {
     "name": "akameco",
     "email": "akameco.t@gmail.com",
@@ -12,17 +13,21 @@
   },
   "scripts": {
     "start": "electron .",
+    "build": "npm run build:osx && npm run build:linux && npm run build:windows",
+    "build:osx": "electron-packager . --overwrite --asar --out=dist --prune --platform=darwin --arch=x64 --app-bundle-id=com.akameco.abematorn --app-version=$npm_package_version && cd dist/Abematron-darwin-x64 && zip -ryXq9 ../Abematron-osx-${npm_package_version}.zip Abematron.app",
+    "build:linux": "electron-packager . --overwrite --out=dist --prune --platform=linux --arch=x64 --app-bundle-id=com.akameco.abematorn --app-version=$npm_package_version && cd dist/Abematron-linux-x64/ && zip -ryq9 ../Abematron-linux-${npm_package_version}.zip *",
+    "build:windows": "electron-packager . --overwrite --asar --out=dist --prune --platform=win32 --arch=ia32 --version-string.ProductName=$npm_package_productName --app-version=$npm_package_version && cd dist/Abematron-win32-ia32 && zip -ryq9 ../Abematron-windows-${npm_package_version}.zip *",
     "test": "xo"
   },
   "files": [
     "index.js"
   ],
   "keywords": [
-    ""
+    "abema.tv"
   ],
   "dependencies": {},
   "devDependencies": {
-    "electron-prebuilt": "^1.0.2",
+    "electron-prebuilt": "^1.1.0",
     "xo": "^0.15.1"
   },
   "xo": {
